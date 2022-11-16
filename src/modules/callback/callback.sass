@@ -1,0 +1,241 @@
+.callback
+  margin-bottom: 15rem
+  &__inner
+    padding: 5rem
+    box-sizing: border-box
+    position: relative
+    max-width: 1400px
+    +screen('max', 1500)
+      padding: 4rem
+    +screen('max', 1023)
+      padding: 3rem
+    +screen('max', 575)
+      padding: 2rem
+    &:before
+      content: ''
+      width: 609px
+      height: 358px
+      background-color: $c5
+      position: absolute
+      display: block
+      left: 0
+      bottom: 0
+      z-index: -1
+      +screen('max', 1023)
+        width: 50%
+    &:after
+      content: ''
+      width: 609px
+      height: 228px
+      background-color: $c5
+      position: absolute
+      display: block
+      right: 0
+      top: 0
+      z-index: -1
+      +screen('max', 1023)
+        width: 50%
+  &__action
+    padding: 8rem 10rem
+    box-sizing: border-box
+    background: $c1
+    +screen('max', 1200)
+      padding: 8rem 6rem
+    +screen('max', 575)
+      padding: 8rem 3rem
+  &__title
+    +fs(43px)
+    text-transform: uppercase
+    font-weight: 600
+    line-height: 1
+    color: $c5
+    margin-bottom: 6rem
+    +screen('max', 1200)
+      +fs(35px)
+      margin-bottom: 4rem
+    +screen('max', 1023)
+      +fs(30px)
+    +screen('max', 575)
+      +fs(20px)
+      margin-bottom: 2rem
+  &__row
+    display: flex
+    +screen('max', 1023)
+      display: block
+  &__col
+    width: 50%
+    +screen('max', 1023)
+      width: 100%
+    &:first-of-type
+      margin-right: 5%
+      width: 45%
+      +screen('max', 1200)
+        width: 50%
+        margin-right: 3%
+      +screen('max', 1023)
+        width: 100%
+        margin-right: 0
+  &__group
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-bottom: 1.5rem
+    +screen('max', 575)
+      display: block
+  &__name
+    font-weight: 600
+    line-height: 1
+    +fs(14px)
+    color: #fff
+    text-transform: uppercase
+    padding-top: 12px
+    flex-shrink: 0
+    width: 140px
+    +screen('max', 1200)
+      width: 120px
+    +screen('max', 575)
+      width: 100%
+  &__field
+    background-color: rgba(#fff, 0.3)
+    +fs(16px)
+    padding: 10px 12px
+    box-sizing: border-box
+    width: 80%
+    font-weight: 400
+    transition: .5s ease
+    color: $c1
+    border-bottom: 2px solid rgba(#fff, 0.6)
+    line-height: 1
+    +screen('max', 575)
+      width: 100%
+      margin-top: 1rem
+    &_textarea
+      height: 150px
+      resize: none
+    &:placeholder
+      color: $c1
+    &:hover
+      background: #fff
+    &.val
+      border-bottom-color: $c5
+      background: #fff
+    &.error
+      border-bottom-color: #ff4f64
+  &__control
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 4rem
+    +screen('max', 575)
+      display: block
+  &__checkbox
+    display: block
+    line-height: 1
+    +screen('max', 1023)
+      max-width: 70%
+    +screen('max', 575)
+      max-width: 100%
+  &__hidden
+    display: none
+    &:checked + .callback__text:after
+      opacity: 1
+    &.error + .callback__text:before
+      border: 1px solid #ff4f64
+  &__text
+    +fs(14px)
+    padding-left: 25px
+    position: relative
+    color: #ffffff
+    font-weight: 400
+    line-height: .8
+    a
+      color: $c5
+    &::before
+      content: ''
+      width: 14px
+      height: 14px
+      border: 2px solid rgba(255, 255, 255, 0.4)
+      background-color: rgba(255, 255, 255, 0.4)
+      box-sizing: border-box
+      transition: .5s ease-in-out
+      position: absolute
+      left: 0
+      top: 2px
+    &:hover
+      &::before
+        border-color: #fff
+    &:after
+      content: ''
+      width: 10px
+      height: 10px
+      position: absolute
+      left: 2px
+      top: 4px
+      opacity: 0
+      transition: .5s ease-in-out
+      background: $c5
+      z-index: 9
+  &__overbtn
+    position: relative
+    width: 160px
+    +screen('max', 575)
+      width: 100%
+      margin-top: 5rem
+    &::before
+      content: ''
+      width: 287px
+      height: 50px
+      background-color: $c4
+      position: absolute
+      top: 50%
+      transform: translateY(-50%) translateX(22px)
+      +screen('max', 1200)
+        transform: translateY(-50%) translateX(0)
+        width: 245px
+      +screen('max', 575)
+        width: 100%
+        transform: translateY(-50%) translateX(5rem)
+  &__submit
+    position: relative
+    +fs(18px)
+    font-weight: 400
+    color: #fff
+    letter-spacing: -0.54px
+    padding: 0 65px
+    line-height: 1
+    box-sizing: border-box
+    transition: .5s ease
+    +screen('max', 1200)
+      +fs(16px)
+    &:before
+      content: ''
+      width: 50px
+      height: 2px
+      background: $c5
+      position: absolute
+      left: 0
+      top: 10px
+      transition: .5s ease
+      +screen('max', 1200)
+        top: 6px
+    &:after
+      content: ''
+      width: 0
+      height: 2px
+      background: $c5
+      position: absolute
+      right: 0
+      top: 10px
+      transition: .5s ease
+      +screen('max', 1200)
+        top: 6px
+    &:hover
+      padding-left: 0
+      &:before
+        width: 0
+      &:after
+        width: 50px
+  .iti
+    width: 100%
+    .callback__field
+      width: 100%

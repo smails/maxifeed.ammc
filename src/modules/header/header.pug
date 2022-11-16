@@ -1,0 +1,38 @@
+mixin header(state)
+  +b.HEADER.header
+    +e.inner.inner
+      +e.A.logo(href='/front.html')
+        +e.IMG.pic(src='/icon/logo.svg' alt='image')
+      +e.NAV.nav
+        +e.UL.list
+          +e.LI.item
+            +e.A.link(href="/front.html") Главная
+          +e.LI.item
+            +e.A.link(href="/about.html") О компании
+          +e.LI.item
+            +e.A.link(href="javascript:void(0);") Продукция
+          +e.LI.item
+            +e.A.link(href="/purchases.html") Закупки
+          +e.LI.item
+            +e.A.link(href="/press.html") Пресс-центр
+          +e.LI.item
+            +e.A.link(href="/contacts.html") Контакты
+        +b.burger
+          span
+    +b.nav-mobile
+      +e.UL.list
+        +e.LI.item
+          +e.A.link(href="/front.html") Главная
+        +e.LI.item
+          +e.A.link(href="/about.html") О компании
+        +e.LI.item
+          +e.A.link(href="javascript:void(0);") Продукция
+        +e.LI.item
+          +e.A.link(href="/purchases.html") Закупки
+        +e.LI.item
+          +e.A.link(href="/press.html") Пресс-центр
+        +e.LI.item
+          +e.A.link(href="/contacts.html") Контакты
+      +e.call
+        +e.P.text Мы всегда рады ответить на любые вопросы о наших продуктах, услугах или общие вопросы. Просто напишите нам.
+        +e.A.open.js-open-modal(href="#callback") Связаться с нами

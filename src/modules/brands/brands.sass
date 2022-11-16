@@ -1,0 +1,59 @@
+.brands
+  padding: 18rem 0 0
+  background: $c2
+  +screen('max', 1200)
+    padding: 12rem 0 3rem
+  &_mod
+    padding: 0 0 10rem
+    +screen('max', 1023)
+      padding-top: 10rem
+  &__title
+    color: #fff
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 2rem
+    +screen('max', 1023)
+      margin-bottom: 4rem
+  &__slider
+    position: relative
+    user-select: none
+    +screen('max', 575)
+      padding: 0
+    .swiper-container
+      padding: 0 2rem 2rem
+      z-index: 10
+  &__slide
+    text-align: center
+    box-sizing: border-box
+    padding:  6rem 1rem 3.5rem
+    transition: .5s ease
+    +screen('max', 1023)
+      background-color: #ffffff
+      box-shadow: -10px 10px 0px 0px #80ff8f
+    +screen('max', 575)
+      max-width: 70%
+    &:hover, &.swiper-slide-active
+      background-color: #ffffff
+      box-shadow: -10px 10px 0px 0px #80ff8f
+      .brands__content
+        opacity: 1
+        visibility: visible
+  &__content
+    opacity: 0
+    visibility: hidden
+    transition: .5s ease
+    +screen('max', 1023)
+      opacity: 1
+      visibility: visible
+  &__caption
+    font-weight: 600
+    color: $c2
+    margin-bottom: 1rem
+  &__text
+    +fs(14px)
+    color: $c2
+    line-height: 1.3
+    margin-bottom: 3rem
+  &__link
+    color: $c4
+    +fs(14px)

@@ -1,0 +1,24 @@
+include ../static/pug/global
+<!DOCTYPE html>
+html(lang="ru")
+  +head('Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное ')
+  body.page
+    +header()
+    .news
+      +b.breadcrumb(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        +e.inner.inner
+          - var active = 'Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное. '
+          each link, index in ["Главная", "Пресс-центр", 'Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное. ']
+            if link == active
+              +e.SPAN.active(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+                +e.SPAN.text(itemprop='item', title=link , href="#")
+                  span(itemprop='name')=link
+                  meta(itemprop='position', content=index)
+            else
+              +e.SPAN.link(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+                +e.A.text(itemprop='item', title=link , href="#")
+                  span(itemprop='name')=link
+                  meta(itemprop='position', content=index)
+      +news('page')
+    +footer('callback')
+    include ../static/pug/_scripts

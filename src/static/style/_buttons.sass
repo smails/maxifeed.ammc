@@ -1,0 +1,51 @@
+.btn
+  display: inline-block
+  font-weight: 700
+  color: #fff
+  border-radius: 5px
+  background: $c2
+  line-height: 1
+  padding: 23px 40px 21px
+  transition: .5s ease
+  +fs(16px)
+  text-align: center
+
+.link
+  position: relative
+  +fs(18px)
+  font-weight: 600
+  color: $c1
+  letter-spacing: -0.54px
+  padding: 0 65px
+  box-sizing: border-box
+  transition: .5s ease
+  +screen('max', 1200)
+    +fs(16px)
+  &:before
+    content: ''
+    width: 50px
+    height: 2px
+    background: $c5
+    position: absolute
+    left: 0
+    top: 13px
+    transition: .5s ease
+    +screen('max', 1200)
+      top: 7.5px
+  &:after
+    content: ''
+    width: 0
+    height: 2px
+    background: $c5
+    position: absolute
+    right: 0
+    top: 13px
+    transition: .5s ease
+    +screen('max', 1200)
+      top: 7.5px
+  &:hover
+    padding-left: 0
+    &:before
+      width: 0
+    &:after
+      width: 50px

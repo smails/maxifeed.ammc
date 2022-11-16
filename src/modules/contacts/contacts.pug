@@ -1,0 +1,44 @@
+
+mixin contacts(vars)
+  +b.contacts
+    +e.inner.inner
+      +e.col
+        +e.head
+          +e.picture
+            +e.IMG.pic(src='/icon/icon-cnt-1.svg' alt='Представительство')
+          +e.H2.title Представительство
+        +e.list
+          +e.item
+            +e.P.name Адрес
+            +e.P.val 123456, г. Москва, Бульвар, 12, стр. 3, оф. 45
+          +e.item
+            +e.P.name Координаты
+            +e.A.val(href="javascript:void(0);") 12.69271, 34.3476991
+          +e.item
+            +e.P.name Телефон
+            +e.A.val(href="tel:+71234567890") +7 123 456-78-90
+          +e.item
+            +e.P.name E-mail
+            +e.A.val(href="mailto:mail@maxifed.ru") mail@maxifed.ru
+        +e.map
+          +e.IMG.pic#map-1(src='/images/stub-1.png' alt='image')
+      +e.col
+        +e.head
+          +e.picture
+            +e.IMG.pic(src='/icon/icon-cnt-2.svg' alt='Представительство')
+          +e.H2.title Производство
+        +e.list
+          +e.item
+            +e.P.name Адрес
+            +e.P.val 123456, г. Москва, Бульвар, 12, стр. 3, оф. 45
+          +e.item
+            +e.P.name Координаты
+            +e.A.val(href="javascript:void(0);") 12.69271, 34.3476991
+          +e.item
+            +e.P.name Телефон
+            +e.A.val(href="tel:+71234567890") +7 123 456-78-90
+          +e.item
+            +e.P.name E-mail
+            +e.A.val(href="mailto:mail@maxifed.ru") mail@maxifed.ru
+        +e.map
+          +e.IMG.pic#map-2(src='/images/stub-2.png' alt='image')

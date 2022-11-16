@@ -1,0 +1,64 @@
+h1, .heading-1
+  font-weight: 700
+  +fs(60px)
+  line-height: .84
+  +screen('max', 1280)
+    +fs(55px)
+  +screen('max', 1200)
+    +fs(45px)
+  +screen('max', 1023)
+    +fs(35px)
+  +screen('max', 575)
+    +fs(21px)
+h2, .heading-2
+  font-weight: 700
+  line-height: .84
+  +fs(40px)
+  +screen('max', 1200)
+    +fs(32px)
+  +screen('max', 1023)
+    +fs(30px)
+  +screen('max', 575)
+    +fs(20px)
+h3, .heading-3
+  font-weight: 700
+  +fs(23px)
+  line-height: .84
+  +screen('max', 1023)
+    +fs(20px)
+h4, .heading-4
+  font-weight: 700
+  +fs(20px)
+  line-height: 1.5
+  +screen('max', 1023)
+    +fs(16px)
+
+
+.text
+  p
+    margin-bottom: 1rem
+    &:last-of-type
+      margin-bottom: 0
+  ul
+    li
+      line-height: 1
+      position: relative
+      padding-left: 20px
+      &:before
+        content: ''
+        display: block
+        width: 7px
+        height: 7px
+        background-color: $c4
+        position: absolute
+        top: 3px
+        left: 0
+        border-radius: 100%
+.text-uppercase
+  text-transform: uppercase
+.text-right
+  text-align: right
+.text-center
+  text-align: center
+.text-underline
+  text-decoration: underline

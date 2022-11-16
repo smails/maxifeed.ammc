@@ -1,0 +1,12 @@
+mixin product(state)
+  if state == 'index'
+    +b.product-index
+      +e.inner
+        +e.content
+          +e.H2.title.heading-1 Продукция 
+            span Maxifeed
+          +e.text
+            p Производство животного белка для применения в кормах с/х животных и домашних питомцев.
+          +e.A.link.link(href="javascript:void(0);")
+            span В раздел
+        +e.IMG.pic(src='/images/prod-1.jpg' alt='image')

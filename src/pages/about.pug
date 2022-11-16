@@ -1,0 +1,10 @@
+include ../static/pug/global
+<!DOCTYPE html>
+html(lang="ru")
+  +head('О компании')
+  body.page
+    +header()
+    +banner('banner', '/images/banner-about.jpg', 'О компании', 'Нам нравится то, что мы делаем, и нам нравится видеть процветание бизнеса наших клиентов и людей, которые в нем работают')
+    +about()
+    +footer('callback')
+    include ../static/pug/_scripts

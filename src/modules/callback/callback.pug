@@ -1,0 +1,28 @@
+mixin callback(vars)
+  +b.callback
+    +e.inner.inner
+      +e.FORM.action
+        +e.P.title Связаться с нами
+        +e.row
+          +e.col
+            +e.group
+              +e.SPAN.name Ваше имя*
+              +e.INPUT.field.required(type="text")
+            +e.group
+              +e.SPAN.name E-mail*
+              +e.INPUT.field.required(type="text" name="email" placeholder="mail@mail.ru")
+            +e.group
+              +e.SPAN.name Телефон*
+              +e.INPUT.field.required(type="tel")
+          +e.col
+            +e.group
+              +e.SPAN.name Сообщение
+              +e.TEXTAREA.field_textarea
+        +e.control
+          +e.LABEL.checkbox
+            +e.INPUT.hidden(type="checkbox")
+            +e.SPAN.text Я ознакомлен с 
+              a(href="/legal.html") политикой конфиденциальности 
+              | и даю согласие на обработку персональных данных
+          +e.overbtn
+            +e.BUTTON.submit Отправить

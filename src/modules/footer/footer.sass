@@ -1,0 +1,199 @@
+.footer-callback
+  margin-top: 15rem
+  position: relative
+  +screen('max', 1023)
+    overflow-x: hidden
+    margin-top: 12rem
+    padding-top: 3rem
+  &:before
+    content: ''
+    width: 100%
+    height: 220px
+    background-color: rgba($c4, .1)
+    position: absolute
+    z-index: -1
+    bottom: 0
+    left: 0
+  &__inner
+    position: relative
+    background: $c1
+    padding: 9rem
+    box-sizing: border-box
+    color: #fff
+    max-width: 1400px
+    +screen('max', 1500)
+      padding-left: 3rem
+    +screen('max', 1350)
+      max-width: 1260px
+      padding: 7.5rem 6rem
+    +screen('max', 1200)
+      max-width: 930px
+    +screen('max', 1023)
+      padding: 7.5rem 2rem
+    +screen('max', 575)
+      padding: 50px 1.34rem
+  &__title
+    text-transform: uppercase
+    margin-bottom: 2rem
+    +screen('max', 1200)
+      margin-bottom: 1.25rem
+    +screen('max', 575)
+      margin-bottom: 4.5rem
+  &__text
+    +fs(18px)
+    max-width: 580px
+    letter-spacing: -0.54px
+    margin-bottom: 3.5rem
+    +screen('max', 1200)
+      +fs(16px)
+      max-width: 415px
+      margin-bottom: 1.5rem
+    +screen('max', 575)
+      margin-bottom: 4.5rem
+  &__link
+    color: #fff
+  &__pic
+    position: absolute
+    right: 0
+    bottom: 0
+    +screen('max', 1200)
+      width: 446px
+    +screen('max', 1023)
+      right: -160px
+    +screen('max', 575)
+      width: 150px
+      right: 0
+.footer
+  background-color: rgba($c4, .1)
+  padding-top: 7rem
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 575)
+      flex-wrap: wrap
+      justify-content: center
+  &__logo
+    +screen('max', 575)
+      display: none
+  &__pic
+    vertical-align: middle
+    +screen('max', 1023)
+      width: 260px
+  &__info
+    text-align: right
+    +screen('max', 575)
+      text-align: center
+  &__phone
+    transition: .5s ease
+    +fs(40px)
+    font-weight: 600
+    letter-spacing: -1.2px
+    line-height: 1
+    +screen('max', 1023)
+      +fs(36px)
+    +screen('max', 575)
+      +fs(24px)
+    &:hover
+      color: $c5
+  &__sign
+    font-weight: 400
+    color: #000000
+    +fs(12px)
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 6.5rem
+    margin-bottom: 2.6rem
+    +screen('max', 1023)
+      margin-top: 5rem
+      flex-wrap: wrap
+    +screen('max', 575)
+      flex-wrap: wrap-reverse
+  &__links
+    +screen('max', 575)
+      margin-top: 4rem
+  &__uri
+    font-weight: 400
+    color: #000000
+    margin-bottom: 0.5rem
+    display: block
+    +fs(12px)
+    transition: .5s ease
+    +screen('max', 575)
+      margin-bottom: 2.5rem
+    &:hover
+      color: $c4
+  &__list
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    +screen('max', 1023)
+      width: 100%
+      justify-content: space-between
+      margin-top: 2rem
+    +screen('max', 575)
+      display: block
+      text-align: center
+      max-width: 165px
+      margin: 0 auto
+  &__item
+    margin-bottom: 0
+    margin-left: 3rem
+    position: relative
+    +screen('max', 1023)
+      margin-left: 0
+      display: inline-block
+      margin-bottom: 2rem
+    +screen('max', 575)
+      margin-bottom: 4.5rem
+    &:before
+      content: ''
+      width: 0
+      left: -5px
+      height: 9px
+      background: $c5
+      z-index: 1
+      position: absolute
+      bottom: 2px
+      transition: .5s ease
+    &.active, &:hover
+      &:before
+        width: calc(100% + 10px)
+  &__link
+    display: inline-block
+    position: relative
+    +fs(16px)
+    font-weight: 400
+    color: $c3
+    line-height: 1
+    z-index: 3
+    +screen('max', 1200)
+      +fs(12px)
+    +screen('max', 575)
+      +fs(16px)
+  &__copyright
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 15px 0
+    box-sizing: border-box
+    +fs(12px)
+    font-weight: 400
+    color: #666666
+    border-top: 1px solid $c4
+    +screen('max', 575)
+      display: block
+  &__dev
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    +screen('max', 575)
+      justify-content: space-between
+      margin-top: 2rem
+    span
+      display: inline-block
+      margin-right: 3.5rem
+    img
+      vertical-align: middle

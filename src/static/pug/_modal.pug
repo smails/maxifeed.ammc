@@ -1,0 +1,71 @@
++b.modal(data-type="#work")
+  +e.container
+    +e.BUTTON.close
+    +e.P.title
+      span Работа в 
+      | Maxifeed
+    +e.FORM.action
+      +e.group
+        +e.SPAN.name Ваше имя*
+        +e.INPUT.field.required(type="text")
+      +e.group
+        +e.SPAN.name E-mail*
+        +e.INPUT.field.required(type="text" name="email" placeholder="mail@mail.ru")
+      +e.group
+        +e.SPAN.name Телефон*
+        +e.INPUT.field.required(type="tel")
+      +e.group
+        +e.SPAN.name Сообщение
+        +e.TEXTAREA.field_textarea
+      +e.addfile
+        +e.LABEL.file
+          +e.INPUT.fl(type="file")
+          +e.SPAN.file-name Прикрепить файл
+        +e.file-change
+          svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20')
+            path(d='M9 0h2v9h9v2h-9v9H9v-9H0V9h9z' fill='#fff')
+      +e.P.sign * обязательные поля для заполнения
+      +e.LABEL.checkbox
+        +e.INPUT.hidden(type="checkbox")
+        +e.SPAN.text Я ознакомлен с 
+          a(href="/legal.html") политикой конфиденциальности 
+          | и даю согласие на обработку персональных данных
+      +e.control
+        +e.BUTTON.submit.link
+          span Отправить
++b.modal(data-type="#callback")
+  +e.container
+    +e.BUTTON.close
+    +e.P.title Связаться с нами
+    +e.FORM.action
+      +e.group
+        +e.SPAN.name Ваше имя*
+        +e.INPUT.field.required(type="text")
+      +e.group
+        +e.SPAN.name E-mail*
+        +e.INPUT.field.required(type="text" name="email" placeholder="mail@mail.ru")
+      +e.group
+        +e.SPAN.name Телефон*
+        +e.INPUT.field.required(type="tel")
+      +e.group
+        +e.SPAN.name Сообщение
+        +e.TEXTAREA.field_textarea
+      +e.P.sign * обязательные поля для заполнения
+      +e.LABEL.checkbox
+        +e.INPUT.hidden(type="checkbox")
+        +e.SPAN.text Я ознакомлен с 
+          a(href="/legal.html") политикой конфиденциальности 
+          | и даю согласие на обработку персональных данных
+      +e.control
+        +e.BUTTON.submit.link
+          span Отправить
+
++b.success
+  +e.container
+    +e.box
+      +e.P.title Спасибо
+      +e.P.subtitle Ваше сообщение отправлено.
+        br
+        | Мы с Вами свяжемся в ближайшее время
+      +e.BUTTON.close.link
+        span Закрыть

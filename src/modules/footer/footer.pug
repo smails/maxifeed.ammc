@@ -1,0 +1,42 @@
+mixin footer(state)
+  if state == 'callback'
+    +b.footer-callback
+      +e.inner.inner
+        +e.content
+          +e.P.title.heading-2 Вам нужно связаться?
+          +e.text
+            p Мы всегда рады ответить на любые вопросы о наших продуктах, услугах или общие вопросы. Просто напишите нам.
+          +e.A.link.link.js-open-modal(href="#callback")
+            span Написать нам
+        +e.IMG.pic(src='/images/callback-1.png' alt='image')
+  +b.FOOTER.footer
+    +e.inner.inner
+      +e.top
+        +e.A.logo(href="/front.html")
+          +e.IMG.pic(src='/icon/logo-footer.svg' alt='image')
+        +e.info
+          +e.A.phone(href="tel:89994567881") 8 (999) 456-78-81
+          +e.P.sign Горячая линия
+      +e.bottom
+        +e.links
+          +e.A.uri(href="javascript:void(0);") Условия и положения
+          +e.A.uri(href="/legal.html") Политика конфиденциальности
+          +e.A.uri(href="javascript:void(0);") Политика использования файлов cookie
+        +e.UL.list
+          +e.LI.item
+            +e.A.link(href="/front.html") Главная
+          +e.LI.item
+            +e.A.link(href="/about.html") О компании
+          +e.LI.item
+            +e.A.link(href="javascript:void(0);") Продукция
+          +e.LI.item
+            +e.A.link(href="/purchases.html") Закупки
+          +e.LI.item
+            +e.A.link(href="/press.html") Пресс-центр
+          +e.LI.item
+            +e.A.link(href="/contacts.html") Контакты
+      +e.copyright
+        +e.P.txt © 2021-2022, MAXIFEED, ООО Производственная компания «ИнтАл»
+        +e.A.dev(href="//amm-c.ru" target="_blank")
+          span Разработка сайта
+          img(src="icon/ammc.svg", alt="")

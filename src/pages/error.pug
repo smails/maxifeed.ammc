@@ -1,0 +1,14 @@
+include ../static/pug/global
+<!DOCTYPE html>
+html(lang="ru")
+  +head('404')
+  body.page
+    +header()
+    +b.error-page
+      +e.inner.inner
+        +e.content
+          +e.P.title.heading-1 страница не найдена
+          +e.P.text Страница с таким адресом не существует, либо была удалена
+          +e.A.link.link(href="front.html") Главная
+        +e.IMG.pic(src='/images/error-1.png' alt='image')
+    include ../static/pug/_scripts

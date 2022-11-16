@@ -1,0 +1,11 @@
+include ../static/pug/global
+<!DOCTYPE html>
+html(lang="ru")
+  +head('Контакты')
+  body.page
+    +header()
+    +banner('banner', '/images/banner-contacts.jpg', 'Контакты', 'Мы рады связаться с вами лично, по телефону, по электронной почте или круглосуточно на нашем веб-сайте. Мы с нетерпением ждем возможности узнать, как мы можем вам помочь.')
+    +contacts()
+    +callback()
+    +footer()
+    include ../static/pug/_scripts
