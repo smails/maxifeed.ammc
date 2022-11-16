@@ -1,6 +1,6 @@
-# Smailsjob project
+# AMMC project
 
-## Магна
+## Максифид
 #### Первый запуск
 
 0. npm -i - Установка node_modules
