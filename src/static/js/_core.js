@@ -35,7 +35,8 @@ $('select').select2({
 });
 
 
-$('.modal__hidden').change(function () {
+$('.modal__fl').change(function () {
+  console.log(this.files)
   $(this).parents('.modal__addfile').addClass('add');
   $('.modal__file-name').text(this.files[0].name)
 })

@@ -8,43 +8,56 @@
   &__col
     width: calc(50% - 8px)
     border: 1px solid $c6
+    border-radius: 40px
     box-sizing: border-box
     +screen('max', 1023)
       margin-bottom: 5rem
       width: 100%
+    +screen('max', 575)
+      border-radius: 20px
     *::selection
       background: $c5
   &__head
     display: flex
-    align-items: flex-end
-    padding: 0 5rem 5rem
+    align-items: center
+    justify-content: space-between
+    padding: 0 0 1rem 5rem
     box-sizing: border-box
-    margin-top: -2rem
     +screen('max', 1200)
-      padding: 0 2.5rem 2.5rem
+      padding: 0 0 2.5rem 2.5rem
     +screen('max', 575)
-      display: block
+      flex-wrap: wrap-reverse
+      justify-content: flex-end
   &__picture
     width: 102px
     height: 102px
     background: #fff
-    border: 1px solid $c1
+    border: 1px solid $c6
+    border-radius: 0 35px 35px 35px
     display: flex
     align-items: center
     justify-content: center
-    margin-right: 2.5rem
     flex-shrink: 0
+    margin: 5px 5px 0 0
+    +screen('max', 575)
+      width: 80px
+      height: 80px
+      border-radius: 0 20px 20px 20px
   &__pic
     vertical-align: middle
+    +screen('max', 575)
+      width: 60%
   &__title
     +fs(30px)
     text-transform: uppercase
     line-height: 0.8
+    margin-top: 4rem
     +screen('max', 1200)
       +fs(20px)
     +screen('max', 575)
       margin-top: 3rem
       +fs(18px)
+      width: 100%
   &__list
     padding: 0 5rem 5rem
     box-sizing: border-box
@@ -88,19 +101,22 @@
         content: ''
         width: 0
         left: -5px
-        height: 9px
+        height: calc(100% + 10px)
         background: $c5
         z-index: 1
         position: absolute
-        bottom: -2px
+        bottom: -5px
         transition: .5s ease
         z-index: -1
+        border-radius: 0 40px 40px 40px
       &:hover
         &:before
           width: calc(100% + 10px)
   &__map
     width: 100%
     height: 500px
+    overflow: hidden
+    @extend %border-radius-bottom
     +screen('max', 1200)
       height: 400px
     +screen('max', 575)
@@ -108,4 +124,3 @@
     #map-1, #map-2
       width: 100%
       height: 100%
-      object-fit: cover

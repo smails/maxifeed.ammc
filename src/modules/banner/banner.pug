@@ -1,22 +1,11 @@
 mixin banner(state, img, title, desc)
   if state == 'index'
     +b.banner
+      +e.IMG.pic(src='/images/banner-1.png' alt='image')
       +e.inner.inner
         +e.H1.title
           span Наша цель
           | постоянное совершенствование знаний о новых разработках
-        +e.IMG.pic(src='/images/banner-1.jpg' alt='image')
-    +b.about
-      +e.inner.inner
-        +e.content
-          +e.H2.title Мы никогда не стоим на месте; мы 
-            span никогда не устареем. 
-            | Это видно в нашей работе
-          +e.text
-            p Мы постоянно совершенствуем наши знания о новых разработках в отраслях и областях, в которых мы работаем. Мы никогда не стоим на месте; мы никогда не устареем. Это видно в нашей работе. Мы постоянно совершенствуем наши знания о новых разработках в отраслях и областях, в которых мы работаем. Мы никогда не стоим на месте; мы никогда не устареем. Это видно в нашей работе.
-          +e.A.link.link(href="javascript:void(0);")
-            span О компании
-        +e.IMG.pic(src='/images/banner-2.jpg' alt='image')
   if state == 'banner'
     +b.heading
       +e.picture

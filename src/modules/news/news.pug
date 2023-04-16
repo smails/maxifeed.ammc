@@ -11,33 +11,34 @@ mixin news(state)
             +e.IMG.pic(src='/images/news-3.jpg' alt='image')
             +e.IMG.pic(src='/images/slide-2.jpg' alt='image')
           +e.content
-            +e.A.line(href="javascript:void(0);").active
+            +e.A.line(href="/news.html").active
               +e.P.date 01/05/2021
               +e.P.text Индоссамент доказывает уголовный обычай делового, хотя законодательством может быть установлено иное. 
-            +e.A.line(href="javascript:void(0);")
+            +e.A.line(href="/news.html")
               +e.P.date 01/05/2021
               +e.P.text Умножение двух векторов (скалярное) необходимо и достаточно.
-            +e.A.line(href="javascript:void(0);")
+            +e.A.line(href="/news.html")
               +e.P.date 01/05/2021
               +e.P.text Нечетная функция осмысленно обуславливает убывающий Наибольший Общий Делитель (НОД).
-            +e.A.line(href="javascript:void(0);")
+            +e.A.line(href="/news.html")
               +e.P.date 01/05/2021
               +e.P.text Функция многих переменных притягивает разрыв функции. 
   if state == 'list'
     +b.news-list.section
       +e.inner.inner
-        +e.UL.nav
-          +e.LI.item.active
-            +e.A.link(href="javascript:void(0);") Все новости
-          +e.LI.item
-            +e.A.link(href="javascript:void(0);") Новости компании 
-          +e.LI.item
-            +e.A.link(href="javascript:void(0);") Новости отрасли
-          +e.LI.item
-            +e.A.link(href="javascript:void(0);") Публикации
+        +e.outer-nav
+          +e.UL.nav
+            +e.LI.item.active
+              +e.A.link(href="/news.html") Все новости
+            +e.LI.item
+              +e.A.link(href="javascript:void(0);") Новости компании 
+            +e.LI.item
+              +e.A.link(href="javascript:void(0);") Новости отрасли
+            +e.LI.item
+              +e.A.link(href="javascript:void(0);") Публикации
         +e.wrap
           +e.list
-            +e.A.elem(href="javascript:void(0);")
+            +e.A.elem(href="/news.html")
               +e.IMG.pic(src='/images/news-4.png' alt='image')
               +e.content
                 +e.title Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное. 
@@ -45,7 +46,7 @@ mixin news(state)
                   +e.date 01/05/2021
                   +e.tag
                     span новости компании
-            +e.A.elem(href="javascript:void(0);")
+            +e.A.elem(href="/news.html")
               +e.IMG.pic(src='/images/news-2.jpg' alt='image')
               +e.content
                 +e.title Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное. 
@@ -53,7 +54,7 @@ mixin news(state)
                   +e.date 01/05/2021
                   +e.tag
                     span новости отрасли
-            +e.A.elem(href="javascript:void(0);")
+            +e.A.elem(href="/news.html")
               +e.IMG.pic(src='/images/news-3.jpg' alt='image')
               +e.content
                 +e.title Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное. 
@@ -61,7 +62,7 @@ mixin news(state)
                   +e.date 01/05/2021
                   +e.tag
                     span новости компании
-            +e.A.elem(href="javascript:void(0);")
+            +e.A.elem(href="/news.html")
               +e.IMG.pic(src='/images/news-4.png' alt='image')
               +e.content
                 +e.title Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное. 
@@ -69,7 +70,7 @@ mixin news(state)
                   +e.date 01/05/2021
                   +e.tag
                     span новости компании
-            +e.A.elem(href="javascript:void(0);")
+            +e.A.elem(href="/news.html")
               +e.IMG.pic(src='/images/news-2.jpg' alt='image')
               +e.content
                 +e.title Индоссамент доказывает уголовный обычай делового оборота, хотя законодательством может быть установлено иное. 

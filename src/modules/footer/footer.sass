@@ -1,49 +1,26 @@
 .footer-callback
   margin-top: 15rem
   position: relative
-  +screen('max', 1023)
-    overflow-x: hidden
-    margin-top: 12rem
-    padding-top: 3rem
-  &:before
-    content: ''
-    width: 100%
-    height: 220px
-    background-color: rgba($c4, .1)
-    position: absolute
-    z-index: -1
-    bottom: 0
-    left: 0
-  &__inner
-    position: relative
-    background: $c1
-    padding: 9rem
-    box-sizing: border-box
-    color: #fff
-    max-width: 1400px
-    +screen('max', 1500)
-      padding-left: 3rem
-    +screen('max', 1350)
-      max-width: 1260px
-      padding: 7.5rem 6rem
-    +screen('max', 1200)
-      max-width: 930px
-    +screen('max', 1023)
-      padding: 7.5rem 2rem
-    +screen('max', 575)
-      padding: 50px 1.34rem
+  padding: 10rem 0 14rem
+  background: linear-gradient(0deg, rgba($c7, 0.85), rgba($c7, 0.85)), url(../images/call-bg.jpg) center/cover no-repeat
+  &__content
+    max-width: 1060px
+    margin: 0 auto
+    text-align: center
+    padding: 10rem 0 6rem
+    border-radius: 40px 0 40px 0
+    border: 1px solid $c4
   &__title
     text-transform: uppercase
-    margin-bottom: 2rem
-    +screen('max', 1200)
-      margin-bottom: 1.25rem
-    +screen('max', 575)
-      margin-bottom: 4.5rem
+    margin-bottom: 3rem
+    color: #fff
   &__text
-    +fs(18px)
-    max-width: 580px
+    +fs(24px)
+    max-width: 600px
+    margin: 0 auto
     letter-spacing: -0.54px
-    margin-bottom: 3.5rem
+    margin-bottom: 1rem
+    color: #fff
     +screen('max', 1200)
       +fs(16px)
       max-width: 415px
@@ -51,21 +28,18 @@
     +screen('max', 575)
       margin-bottom: 4.5rem
   &__link
-    color: #fff
-  &__pic
-    position: absolute
-    right: 0
-    bottom: 0
-    +screen('max', 1200)
-      width: 446px
-    +screen('max', 1023)
-      right: -160px
-    +screen('max', 575)
-      width: 150px
-      right: 0
+    +fs(24px)
+    font-weight: 600
+    color: $c5
+    text-transform: uppercase
+
 .footer
-  background-color: rgba($c4, .1)
+  background-color: $c6
   padding-top: 7rem
+  border-radius: 40px 40px 0 0
+  margin-top: -40px
+  z-index: 1
+  position: relative
   &__top
     display: flex
     justify-content: space-between
@@ -78,6 +52,8 @@
       display: none
   &__pic
     vertical-align: middle
+    +screen('max', 1200)
+      width: 340px
     +screen('max', 1023)
       width: 260px
   &__info
@@ -90,6 +66,7 @@
     font-weight: 600
     letter-spacing: -1.2px
     line-height: 1
+    color: $c3
     +screen('max', 1023)
       +fs(36px)
     +screen('max', 575)
@@ -105,15 +82,22 @@
     justify-content: space-between
     align-items: flex-end
     margin-top: 6.5rem
-    margin-bottom: 2.6rem
     +screen('max', 1023)
       margin-top: 5rem
-      flex-wrap: wrap
-    +screen('max', 575)
       flex-wrap: wrap-reverse
-  &__links
+      justify-content: flex-end
     +screen('max', 575)
-      margin-top: 4rem
+      flex-wrap: wrap
+      justify-content: flex-start
+  &__links
+    text-align: right
+    margin-bottom: 2rem
+    +screen('max', 1023)
+      margin-bottom: 0.5rem
+    +screen('max', 575)
+      margin-top: 7rem
+      display: block
+      text-align: left
   &__uri
     font-weight: 400
     color: #000000
@@ -129,10 +113,10 @@
     display: flex
     align-items: center
     justify-content: flex-end
+    margin-left: -2rem
     +screen('max', 1023)
       width: 100%
       justify-content: space-between
-      margin-top: 2rem
     +screen('max', 575)
       display: block
       text-align: center
@@ -140,27 +124,26 @@
       margin: 0 auto
   &__item
     margin-bottom: 0
-    margin-left: 3rem
     position: relative
+    padding: 2rem
     +screen('max', 1023)
-      margin-left: 0
       display: inline-block
-      margin-bottom: 2rem
-    +screen('max', 575)
-      margin-bottom: 4.5rem
     &:before
       content: ''
-      width: 0
-      left: -5px
-      height: 9px
+      width: 100%
+      height: 100%
       background: $c5
       z-index: 1
       position: absolute
-      bottom: 2px
+      top: 0
+      left: 0
+      opacity: 1
       transition: .5s ease
+      border-top-right-radius: 20px
+      opacity: 0
     &.active, &:hover
       &:before
-        width: calc(100% + 10px)
+        opacity: 1
   &__link
     display: inline-block
     position: relative

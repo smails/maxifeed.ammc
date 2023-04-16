@@ -43,9 +43,25 @@ window.addEventListener('scroll', () => {
           number: numb_end,
           easing: 'easeInQuad',
           numberStep: comma_separator_number_step,
-        },
-        4000);
+        },4000);
+        setTimeout(() => {
+          $(this).find('span').next().fadeIn();
+        }, 4500);
       });
     }
   }
 })
+// window.addEventListener('load', () => {
+//   // eslint-disable-next-line camelcase
+//   if (target_block.length) {
+//     $(target_block).find('[data-numb]').each((index, item) => {
+//       if (item.dataset.numb.length == 3){
+//         item.style.width = item.dataset.numb.length * 23 + 'px';
+//       } else if (item.dataset.numb.length == 4){
+//         item.style.width = item.dataset.numb.length * 27 + 'px';
+//       } else if (item.dataset.numb.length == 5) {
+//         item.style.width = item.dataset.numb.length * 29 + 'px';
+//       }
+//     })
+//   }
+// })

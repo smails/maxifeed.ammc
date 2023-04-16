@@ -1,0 +1,10 @@
+include ../static/pug/global
+<!DOCTYPE html>
+html(lang="ru")
+  +head('Продукция')
+  body.page
+    +header('Продукция')
+    +banner('banner', '/images/banner-prod.png', 'Продукция', 'Читайте последние новости компании, отчеты, мнения экспертов и многое другое от нашей команды талантливых профессионалов в области отрасли')
+    +product('page')
+    +footer('callback')
+    include ../static/pug/_scripts

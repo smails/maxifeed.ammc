@@ -1,8 +1,9 @@
 const brands = new Swiper('.brands__slider .swiper-container', {
   speed: 400,
   loop: true,
-  slidesPerView: 7,
+  slidesPerView: 6,
   slidesOffsetAfter: 0,
+  slidesPerGroup: 3,
   centeredSlides: true,
   breakpoints: {
     575: {

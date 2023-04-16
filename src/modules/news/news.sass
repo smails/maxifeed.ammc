@@ -1,13 +1,13 @@
 .news-index
   position: relative
-  padding-bottom: 10rem
+  margin-bottom: 10rem
   &:before
     content: ''
     width: calc(100% - 1540px)
     height: 70%
     background-color: $c2
     position: absolute
-    z-index: -1
+    z-index: -2
     top: 0
     left: 0
     min-width: 150px
@@ -18,6 +18,16 @@
       height: 50%
     +screen('max', 575)
       min-width: 46px
+  &:after
+    content: ''
+    width: 60px
+    height: 70%
+    left: calc(100% - 1580px)
+    top: 0
+    background: #fff
+    border-radius: 40px 0 0 0
+    position: absolute
+    z-index: -1
   &__inner
     +screen('max', 1200)
       padding: 0
@@ -25,7 +35,7 @@
       padding: 0 2.5rem
   &__title
     text-transform: uppercase
-    padding: 6rem 0 6rem 17%
+    padding: 6rem 0 6rem 15%
     box-sizing: border-box
     position: relative
     +screen('max', 1200)
@@ -42,7 +52,7 @@
       height: 5px
       background: $c5
       position: absolute
-      left: 0
+      left: -15px
       top: 50%
       transform: translateY(-50%)
       transition: .5s ease
@@ -90,6 +100,7 @@
     object-fit: cover
     vertical-align: middle
     display: none
+    border-radius: 0 40px 0 40px
     &.active
       display: block
   &__line
@@ -177,35 +188,30 @@
   padding-bottom: 20rem
   +screen('max', 1200)
     padding-top: 5rem
-  +screen('max', 1023)
     padding-bottom: 10rem
-  &:before
-    content: ''
-    width: calc((100% - 1400px) / 2 + 340px)
-    height: calc(100% + 140px)
-    background: $c2
-    position: absolute
-    z-index: -1
-    top: 0
-    left: 0
-    min-width: 260px
-    +screen('max', 1023)
-      max-width: 100%
-      width: 100%
-      height: 110px
-    +screen('max', 575)
-      height: 20%
   &__inner
     display: flex
     +screen('max', 1023)
       display: block
-  &__nav
+  &__outer-nav
     max-width: 360px
     width: 25%
     box-sizing: border-box
+    position: relative
     +screen('max', 1023)
       width: 100%
       max-width: 100%
+    +screen('max', 575)
+      overflow: auto
+      scrollbar-width: 0
+    &::-webkit-scrollbar
+      height: 0
+      width: 0
+  &__nav
+    position: sticky
+    top: 100px
+    +screen('max', 575)
+      display: flex
   &__item
     position: relative
     margin-bottom: 1rem
@@ -214,6 +220,8 @@
     +screen('max', 1023)
       display: inline-block
       margin-bottom: 0
+      flex-shrink: 0
+      margin-right: 2rem
     &:after
       content: ''
       height: 3px
@@ -230,7 +238,6 @@
         color: $c5
   &__link
     font-weight: 700
-    color: #fff
     text-transform: uppercase
     transition: .5s ease
     margin-right: 1rem
@@ -257,6 +264,8 @@
       display: block
       background: #fff
     &:hover
+      .news-list__content
+        border-color: $c4
       .news-list__title
         color: $c4
   &__pic
@@ -264,6 +273,7 @@
     width: 290px
     object-fit: cover
     margin-right: 3rem
+    border-radius: 20px 0 20px 20px
     +screen('max', 575)
       width: 100%
       margin-right: 0
@@ -271,6 +281,7 @@
     border-top: 1px solid rgba(#53524c, .2)
     border-bottom: 1px solid rgba(#53524c, .2)
     padding-top: 5rem
+    transition: .5s ease
     box-sizing: border-box
     +screen('max', 575)
       padding: 3rem
@@ -324,7 +335,7 @@
       z-index: 3
   &__control
     padding-top: 3rem
-    border-top: 9px solid #eaeaff
+    border-top: 9px solid #eee6eb
     text-align: center
   &__btn
     position: relative
@@ -355,9 +366,9 @@
   position: relative
   border-top: 1px solid rgba(#ffffff, .1)
   +screen('max', 1023)
-    margin-top: 6rem
+    margin-top: 8rem
   +screen('max', 575)
-    margin-top: 10rem
+    margin-top: 8rem
   &:before
     content: ''
     width: 100%
@@ -365,8 +376,9 @@
     background-color: $c2
     position: absolute
     z-index: -1
-    top: -7.3rem
+    top: -8.3rem
     left: 0
+    @extend %border-radius-bottom
     +screen('max', 1200)
       height: 400px
     +screen('max', 1023)
@@ -399,6 +411,7 @@
     max-height: 412px
     position: sticky
     top: 100px
+    border-radius: 40px 0 40px 40px
     +screen('max', 1200)
       float: right
       position: relative
@@ -451,7 +464,7 @@
       +fs(12px)
   &__tag
     font-weight: 700
-    color: $c4
+    color: $c3
     +fs(14px)
     text-transform: uppercase
     position: relative
@@ -473,6 +486,7 @@
       z-index: 3
   &__img
     width: 100%
+    border-radius: 0 40px 40px 40px
   &__control
     display: flex
     justify-content: space-between
@@ -530,7 +544,7 @@
       margin-bottom: 2rem
       &:before
         content: ''
-        width: 70px
+        width: 20px
         height: 100%
         position: absolute
         top: 0
@@ -538,6 +552,7 @@
         z-index: -1
         background: $c5
         display: block
+        border-radius: 10px
       i
         +fs(22px)
         letter-spacing: -0.66px
@@ -639,6 +654,7 @@
     vertical-align: middle
     width: 100%
     object-fit: cover
+    border-radius: 0 40px 40px 40px
   &__play
     width: 60px
     height: 60px
@@ -647,6 +663,7 @@
     background-repeat: no-repeat
     background-position: 55% center
     position: absolute
+    border-radius: 100%
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)

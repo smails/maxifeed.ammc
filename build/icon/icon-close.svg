@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g><g><path fill="#3c3676" d="M.222 1.636L1.636.22 8 6.585 14.364.221l1.414 1.415-6.364 6.363 6.364 6.365-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414 6.364-6.365z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="15.56" height="15.562" viewBox="0 0 15.56 15.562">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8de100;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Фигура_657" data-name="Фигура 657" class="cls-1" d="M1538.22,331.635l1.42-1.414,14.14,14.142-1.42,1.414Zm14.14-1.414,1.42,1.414-14.14,14.142-1.42-1.414Z" transform="translate(-1538.22 -330.219)"/>
+</svg>

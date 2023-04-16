@@ -1,0 +1,24 @@
+include ../static/pug/global
+<!DOCTYPE html>
+html(lang="ru")
+  +head('Главная')
+  body.index
+    +header()
+    +banner('index')
+    +product('index')
+    +b.about
+      +e.inner.inner
+        +e.IMG.pic(src='/images/banner-2.png' alt='image')
+        +e.content
+          +e.H2.title Мы никогда не стоим на месте; мы 
+            span никогда не устареем. 
+            | Это видно в нашей работе
+          +e.text
+            p Мы постоянно совершенствуем наши знания о новых разработках в отраслях и областях, в которых мы работаем. Мы никогда не стоим на месте; мы никогда не устареем. Это видно в нашей работе. Мы постоянно совершенствуем наши знания о новых разработках в отраслях и областях, в которых мы работаем. Мы никогда не стоим на месте; мы никогда не устареем. Это видно в нашей работе.
+          +e.A.link.link(href="javascript:void(0);")
+            span О компании
+    +vantage()
+    +brands()
+    +news('index')
+    +footer('callback')
+    include ../static/pug/_scripts

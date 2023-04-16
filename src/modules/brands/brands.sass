@@ -1,12 +1,7 @@
 .brands
-  padding: 18rem 0 0
   background: $c2
-  +screen('max', 1200)
-    padding: 12rem 0 3rem
   &_mod
-    padding: 0 0 10rem
-    +screen('max', 1023)
-      padding-top: 10rem
+    padding: 10rem 0
   &__title
     color: #fff
     text-transform: uppercase
@@ -25,19 +20,23 @@
   &__slide
     text-align: center
     box-sizing: border-box
-    padding:  6rem 1rem 3.5rem
+    padding:  6rem 2rem 3.5rem
     transition: .5s ease
     +screen('max', 1023)
       background-color: #ffffff
-      box-shadow: -10px 10px 0px 0px #80ff8f
+      box-shadow: -10px 10px 0px 0px $c5
+      border-radius: 0 40px 40px 40px
     +screen('max', 575)
       max-width: 70%
     &:hover, &.swiper-slide-active
       background-color: #ffffff
-      box-shadow: -10px 10px 0px 0px #80ff8f
+      box-shadow: -10px 10px 0px 0px $c5
+      border-radius: 0 40px 40px 40px
       .brands__content
         opacity: 1
         visibility: visible
+      .brands__pic
+        filter: none
   &__content
     opacity: 0
     visibility: hidden
@@ -49,6 +48,7 @@
     font-weight: 600
     color: $c2
     margin-bottom: 1rem
+    height: 72px
   &__text
     +fs(14px)
     color: $c2
@@ -57,3 +57,9 @@
   &__link
     color: $c4
     +fs(14px)
+  &__pic
+    width: 100%
+    filter: brightness(0) invert(1)
+    transition: .5s ease
+  &__picture
+    position: relative
