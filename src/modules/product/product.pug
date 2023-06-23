@@ -8,7 +8,7 @@ mixin product(state)
             p Производство животного белка для применения в кормах с/х животных и домашних питомцев.
           +e.A.link.link(href="/product.html")
             span В раздел
-        +e.IMG.pic(src='/images/prod-1.png' alt='image')
+        +e.IMG.pic(src='/images/prod-1.jpg' alt='image')
   if state == 'page'
     +b.products-info
       +e.inner.inner
@@ -31,19 +31,20 @@ mixin product(state)
               br
               span.loading 100% биологическая безопасность 
               | конечной̆ продукции 
-            +e.IMG.pic(src='/images/prod-2.png' alt='')
+            +e.IMG.pic(src='/images/prod-2.jpg' alt='')
           +e.col
             +e.text
               p Добавки белковые кормовые «Биомит», представляют собой высокобелковые кормовые концентраты, вырабатываемые из сырья животного, растительного происхождения и другого сырья,  предназначенные для последующего разбавления и смешивания с другими кормовыми средствами с целью получения сбалансированного по питательности корма в производстве комбикормовой продукции, а также для непосредственного добавления в рационы сельскохозяйственных животных, птицы, непродуктивных животных (пушных зверей, кошек, собак) и рыб.
               p Продукты линейки «Биомит» - прямая альтернатива мясной муке 1-го сорта. Фактический протеин более 80%, а по органолептическим, физико- химическим и бактериологическим показателям кормовые добавки «Биомит» превосходят кормовую муку. Концентраты «Биомит» имеют более жесткие показатели по жиру, золе, влаге. 
     +b.products-line
       +e.inner.inner
-        +e.head
-          +e.H2.title.heading-1.text-uppercase Кормовые
-          +e.IMG.icon(src='/icon/prod-icon-1.svg' alt='')
-        +e.sign В соответствии с технологическим процессом обеспечивается производство трех основных продуктов: 
-          b Биомит Норма, Биомит Экстра и Биомит Супер
-          |, отличающихся содержанием количества протеина в конечном продукте
+        +e.head_beetw
+          +e.wrap
+            +e.H2.title.heading-1.text-uppercase Кормовые
+            +e.sign В соответствии с технологическим процессом обеспечивается производство трех основных продуктов: 
+              b Биомит Норма, Биомит Экстра и Биомит Супер
+              |, отличающихся содержанием количества протеина в конечном продукте
+          +e.IMG.icon-big(src='/icon/prod-icon-1.svg' alt='')
         +e.list_three
           +e.item
             +e.info
@@ -52,9 +53,11 @@ mixin product(state)
               +e.A.link(href="#") Документация
             +e.pic-left
               +e.IMG.img_half(src='/images/prod-3.png' alt='')
-              +e.P.hold_right Бигбэг - 1 тонна
-                br
-                | мешки - 50 кг
+              +e.pic-content
+                +e.P.hold_right Биг-бэг
+                  br
+                  | 900/1000кг
+                +e.A.buy.btn-buy.js-open-modal(href="#callback") Купить
           +e.item
             +e.info
               +e.H3.caption Биомит Экстра
@@ -62,9 +65,11 @@ mixin product(state)
               +e.A.link(href="#") Документация
             +e.pic-left
               +e.IMG.img_half(src='/images/prod-3.png' alt='')
-              +e.P.hold_right Бигбэг - 1 тонна
-                br
-                | мешки - 50 кг
+              +e.pic-content
+                +e.P.hold_right Бигбэг
+                  br
+                  | 900/1000кг
+                +e.A.buy.btn-buy.js-open-modal(href="#callback") Купить
           +e.item
             +e.info
               +e.H3.caption Биомит Супер 
@@ -73,9 +78,11 @@ mixin product(state)
               +e.A.link(href="#") Документация
             +e.pic-left
               +e.IMG.img_half(src='/images/prod-3.png' alt='')
-              +e.P.hold_right Бигбэг - 1 тонна
-                br
-                | мешки - 50 кг
+              +e.pic-content
+                +e.P.hold_right Бигбэг
+                  br
+                  | 900/1000кг
+                +e.A.buy.btn-buy.js-open-modal(href="#callback") Купить
         +e.list_two
           +e.item
             +e.info
@@ -85,18 +92,20 @@ mixin product(state)
               +e.A.link(href="#") Документация
             +e.pic-right_top
               +e.IMG.img(src='/images/prod-4.png' alt='')
-              +e.P.hold картонно-наливной барабан - 30 кг
-                br
-                | пластиковые  бочки - 100 кг 
+              +e.pic-content
+                +e.P.hold Биг-бэг 900/1000кг
+                +e.A.buy.btn-buy.js-open-modal(href="#callback") Купить
           +e.item
             +e.info
               +e.H3.caption Биомит Wool 
               +e.P.txt Белковый керотинсодержащий концентрат, состоящий исключительно из щетины животных
             +e.pic-right_top
               +e.IMG.img(src='/images/prod-4.png' alt='')
-              +e.P.hold картонно-наливной барабан - 30 кг
-                br
-                | пластиковые  бочки - 100 кг 
+              +e.pic-content
+                +e.P.hold картонно-наливной барабан - 30 кг
+                  br
+                  | пластиковые  бочки - 100 кг 
+                +e.A.buy.btn-buy.js-open-modal(href="#callback") Купить
     +b.products-line
       +e.inner.inner
         +e.head
@@ -106,6 +115,8 @@ mixin product(state)
           +e.info
             +e.H3.caption Неопровит
             +e.P.txt Очищенный пищевой белок для использования в производстве БАД  и спортивного питания
-          +e.pic-right
-            +e.IMG.img(src='/images/prod-5.png' alt='')
-            +e.P.hold_bottom мешки - 150 кг 
+            +e.info-content
+              +e.P.hold мешки - 150 кг 
+              +e.A.buy.btn-buy.js-open-modal(href="#callback") Купить
+          +e.pic-big
+            +e.IMG.picture(src='/images/prod-5.png' alt='')

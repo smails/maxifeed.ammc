@@ -124,3 +124,58 @@
     #map-1, #map-2
       width: 100%
       height: 100%
+
+.cnt
+  text-align: center
+  margin-bottom: 10rem
+  &__title
+    +fs(30px)
+    text-transform: uppercase
+    margin-bottom: 2rem
+  &__item
+    display: inline-flex
+    align-items: flex-end
+    margin-bottom: 2rem
+    +screen('max', 575)
+      display: block
+      margin-bottom: 1rem
+    &:last-of-type
+      margin-bottom: 0
+  &__sign
+    margin-bottom: 1rem
+    font-weight: 600
+    +fs(18px)
+  &__name
+    font-weight: 600
+    +fs(18px)
+    margin-right: 2rem
+    line-height: 1
+  &__val
+    +fs(24px)
+    font-weight: 600
+    letter-spacing: -0.54px
+    line-height: 1
+    display: inline-block
+    position: relative
+    color: $c4
+    +screen('max', 1200)
+      +fs(16px)
+    +screen('max', 575)
+      width: 100%
+      margin-top: 1rem
+    &[href]
+      &:before
+        content: ''
+        width: 0
+        left: -5px
+        height: calc(100% + 10px)
+        background: $c5
+        z-index: 1
+        position: absolute
+        bottom: -5px
+        transition: .5s ease
+        z-index: -1
+        border-radius: 0 40px 40px 40px
+      &:hover
+        &:before
+          width: calc(100% + 10px)

@@ -95,9 +95,16 @@ body
     transform: translate(-50%, -50%)
     box-sizing: border-box
     background: $c2
-    max-width: 600px
+    max-width: 635px
     width: 90%
     border-radius: 40px 0 40px 40px
+    @media screen and ( max-height: 700px) and (max-width: 600px)
+      height: 100%
+      top: 0
+      transform: translate(-50%, 0)
+      overflow: auto
+      border-radius: 0
+      width: 100%
     &:before
       content: ''
       width: 95%
@@ -132,6 +139,11 @@ body
     letter-spacing: -1.29px
     padding: 7rem 3rem 3rem 7rem
     +fs(42px)
+    @media screen and ( max-height: 815px) and (min-width: 1200px) and (max-width: 1600px)
+      padding: 4rem 7rem 1rem
+    @media screen and ( max-height: 815px) and (min-width: 1200px) and (max-width: 1400px)
+      +fs(32px)
+      padding: 2rem 7rem 0rem
     +screen('max', 575)
       +fs(25px)
       padding: 5rem 3.5rem 2rem
@@ -144,6 +156,8 @@ body
     align-items: flex-start
     justify-content: space-between
     margin-bottom: 1.5rem
+    @media screen and ( max-height: 815px) and (min-width: 1200px) and (max-width: 1600px)
+      margin-bottom: 0.5rem
     +screen('max', 575)
       display: block
   &__name
@@ -154,9 +168,12 @@ body
     text-transform: uppercase
     padding-top: 12px
     flex-shrink: 0
-    width: 140px
+    width: 160px
     +screen('max', 575)
       width: 100%
+    br
+      @media screen and ( max-height: 700px) and (max-width: 600px)
+        display: none
   &__field
     background-color: rgba(#fff, 0.3)
     +fs(16px)
@@ -165,6 +182,7 @@ body
     width: 80%
     font-weight: 600
     transition: .5s ease
+    max-width: 320px
     color: $c1
     border-bottom: 2px solid rgba(#fff, 0.6)
     line-height: 1
@@ -295,16 +313,20 @@ body
     color: #fff
     line-height: 1
     +screen('max', 575)
-      margin-top: -1rem
+      margin-top: 0
       +fs(10px)
   .iti
     width: 100%
+    max-width: 320px
     .modal__field
       width: 100%
   &__control
     margin-top: 3rem
     padding-top: 3.5rem
     position: relative
+    @media screen and ( max-height: 815px) and (min-width: 1200px) and (max-width: 1600px)
+      margin-top: 1.5rem
+      padding-top: 2rem
     &:before
       content: ''
       width: calc(100% + 14rem)

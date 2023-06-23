@@ -1,4 +1,4 @@
-mixin footer(state)
+mixin footer(state, form='#callback')
   if state == 'callback'
     +b.footer-callback
       +e.inner.inner
@@ -6,7 +6,7 @@ mixin footer(state)
           +e.P.title.heading-2 Вам нужно связаться?
           +e.text
             p Мы всегда рады ответить на любые вопросы о наших продуктах, услугах или общие вопросы. Просто напишите нам.
-          +e.A.link.js-open-modal(href="#callback") Написать нам
+          +e.A.link.js-open-modal(href=form) Написать нам
   +b.FOOTER.footer
     +e.inner.inner
       +e.top

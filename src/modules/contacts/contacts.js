@@ -4,6 +4,8 @@ if (document.querySelectorAll('#map-1').length) {
       center: [55.692318, 37.347485],
       zoom: 16,
       controls: [],
+    }, {
+      suppressMapOpenBlock: true
     });
     const mark1 = new ymaps.Placemark(myMap.getCenter(), {}, {
       iconLayout: 'default#image',
@@ -23,7 +25,9 @@ if (document.querySelectorAll('#map-2').length) {
       center: [54.863513, 38.557650],
       zoom: 17,
       controls: [],
-    });
+    },{
+        suppressMapOpenBlock: true
+      });
     const mark1 = new ymaps.Placemark(myMap.getCenter(), {}, {
       iconLayout: 'default#image',
       iconImageHref: 'icon/icon-map-2.png',
@@ -31,8 +35,8 @@ if (document.querySelectorAll('#map-2').length) {
       iconImageOffset: [-20, -65],
     });
 
-
-    myMap.geoObjects
-      .add(mark1)
+  myMap.geoObjects
+    .add(mark1)
   });
+  
 }

@@ -195,17 +195,16 @@
     display: flex
     justify-content: space-between
     align-items: center
-    +screen('max', 575)
+    +screen('max', 1200)
       display: block
   &__content
     max-width: 430px
     width: 40%
     margin-right: 5rem
-    +screen('max', 1023)
-      width: 35%
-    +screen('max', 575)
+    +screen('max', 1200)
       margin-right: 0
       width: 100%
+      max-width: 100%
   &__title
     text-transform: uppercase
     margin-bottom: 3rem
@@ -224,20 +223,21 @@
       background: $c4
   &__table
     display: grid
-    grid-template-columns: 250px 250px
-    width: 50%
-    max-width: 556px
+    grid-template-columns: repeat(3, 250px)
+    width: 70%
+    max-width: 800px
     justify-content: space-between
-    +screen('max', 1023)
-      grid-template-columns: 1fr 1fr
-      width: 60%
-    +screen('max', 575)
+    +screen('max', 1200)
       width: 100%
       margin-top: 5rem
+    +screen('max', 575)
+      grid-template-columns: 1fr 1fr
   &__item
     margin-bottom: 12rem
     +screen('max', 1200)
       margin-bottom: 7rem
+    +screen('max', 575)
+      margin-bottom: 4rem
   &__numb
     position: relative
     +fs(40px)

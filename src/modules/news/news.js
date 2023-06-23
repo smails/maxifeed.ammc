@@ -40,3 +40,11 @@ const newsSlider = new Swiper('.news-page .swiper-container', {
     },
   },
 });
+
+document.addEventListener("DOMContentLoaded", () =>{
+  if (window.location.search.indexOf("tags") >= 0){
+    $('html, body').animate({
+      scrollTop: $('.news-list').offset().top,
+    }, 1000)
+  }
+})

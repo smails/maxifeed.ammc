@@ -108,6 +108,8 @@
     margin-left: auto
     display: block
     margin-top: 12rem
+    border-top-right-radius: 40px
+    border-bottom-left-radius: 40px
     +screen('max', 1200)
       margin-right: 0
       margin-top: -10px
@@ -162,6 +164,9 @@
     display: flex
     align-items: center
     margin-bottom: 2rem
+    &_beetw
+      justify-content: space-between
+      margin-bottom: 4rem
     +screen('max', 575)
       display: block
   &__icon
@@ -172,11 +177,17 @@
     +screen('max', 575)
       margin-left: 0
       margin-top: 2rem
+  &__icon-big
+    width: 23vw
+    +screen('max', 1023)
+      width: 300px
+    +screen('max', 575)
+      margin-top: 2rem
   &__sign
     +fs(18px)
     line-height: 1.5
     max-width: 930px
-    margin-bottom: 4rem
+    margin-top: 2rem
     b
       color: $c5
   &__list
@@ -198,6 +209,9 @@
     justify-content: space-between
     +screen('max', 1200)
       padding: 4rem 2rem
+  &__info
+    position: relative
+    z-index: 2
   &__caption
     text-transform: uppercase
     margin-bottom: 2rem
@@ -206,6 +220,9 @@
     display: inline-block
     margin-top: 1rem
     border-bottom: 2px solid $c5
+    transition: .5s ease
+    &:hover
+      border-bottom-color: $c4
   &__img
     vertical-align: middle
     +screen('max', 575)
@@ -214,10 +231,13 @@
       max-width: 51%
       +screen('max', 575)
         max-width: 45%
+  &__info-content
+    margin-top: 3rem
   &__pic-left
     display: flex
-    align-items: center
+    align-items: flex-end
     margin-top: 3rem
+    justify-content: space-between
   &__pic-right
     display: flex
     align-items: flex-end
@@ -227,10 +247,19 @@
     +screen('max', 1023)
       width: 100%
     &_top
-      margin-top: -7rem
+      margin-top: -3rem
       width: 100%
       +screen('max', 1200)
-        margin-top: -4rem
+        margin-top: -1rem
+  &__pic-big
+    width: 40%
+    +screen('max', 1023)
+      width: 60%
+    +screen('max', 600)
+      width: 100%
+      margin-top: 2rem
+  &__picture
+    width: 100%
   &__hold
     font-weight: 700
     +fs(18px)
@@ -260,5 +289,7 @@
     justify-content: space-between
     +screen('max', 1200)
       padding: 4rem 2rem
-    +screen('max', 1023)
+    +screen('max', 600)
       display: block
+  &__buy
+    margin-top: 3rem
