@@ -45,7 +45,7 @@ $('.modal__file-change').click(function (e) {
     $('.modal__hidden').val(null);
     $('.modal__file-name').text('Прикрепить файл')
   } else{
-    $('.modal__hidden').trigger('click');
+    document.querySelector('.modal__fl').click()
   }
 })
 

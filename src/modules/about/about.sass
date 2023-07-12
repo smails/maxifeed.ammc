@@ -102,22 +102,6 @@
     +screen('max', 1023)
       width: 100%
       margin-bottom: 5rem
-    &:before
-      content: ''
-      width: 111px
-      height: 88px
-      position: absolute
-      bottom: -10px
-      left: -80px
-      background-image: url(../icon/blockquote-1.svg)
-      background-size: contain
-      background-repeat: no-repeat
-      display: block
-      +screen('max', 1023)
-        left: 0
-      +screen('max', 575)
-        width: 90px
-        height: 45px
   &__pic
     width: 100%
     vertical-align: middle
@@ -250,6 +234,19 @@
     color: #fff
     +screen('max', 575)
       color: $c1
+  &__files
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    gap: 5px
+    padding-bottom: 2px
+  &__file
+    display: inline-block
+    margin-top: 1rem
+    border-bottom: 2px solid $c5
+    transition: .5s ease
+    &:hover
+      border-bottom-color: $c4
 
 .about-bottom
   padding: 10rem 0

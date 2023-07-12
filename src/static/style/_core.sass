@@ -275,6 +275,13 @@ body
           transform: rotate(45deg)
         path
           fill: $c2
+    &:hover
+      &:not(.add)
+        .modal__file-name
+          color: $c5
+        .modal__file-change
+          path
+            fill: $c5
   &__file
     width: 100%
   &__file-name
@@ -290,6 +297,7 @@ body
     white-space: nowrap
     overflow: hidden
     display: block
+    transition: .5s ease
   &__fl
     display: none
   &__file-change
